@@ -59,6 +59,16 @@ int main(int argc, char** argv) {
         puts("");
         OMP_NUM_THREADS = atoi(argv[argc - 1]);
     }
+    if (argc > 1) {
+        for (int i = 0; i < argc; i++) {
+            if (i == 0)
+                printf("%s", argv[i]);
+            else
+                printf(" %s", argv[i]);
+        }
+        puts("");
+        OMP_NUM_THREADS = atoi(argv[argc - 1]);
+    }
     while (scanf("%d", &n) != EOF) {
         int **A, **B, **C;
         /* se inicializa / reserva memoria para las matrices */
